@@ -20,7 +20,7 @@ function Contact() {
 							<img className='rounded-xl hover:scale-105 ease-in duration-300' src='https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80' alt=''/>
 						</div>
 						<div>
-							<h2 className='py-2'>Name here</h2>
+							<h2 className='py-2'>Wang</h2>
 							<p>Front-End Developer</p>
 							<p className='py-4'>I am available for freelance or full-time positions. Contact me and let&#39;s talk.</p>
 						</div>
