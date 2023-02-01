@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {RiRadioButtonFill} from 'react-icons/ri'
-import propertyImg from '../public/assets/projects/property.jpg'
+import propertyImg from '../static/images/projects/property.jpg'
 
 const Property = () => {
   return (
