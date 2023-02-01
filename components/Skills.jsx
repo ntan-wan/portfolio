@@ -14,8 +14,7 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							{/* <Image src='/../public/assets/skills/html.png' width='64' height='64' alt='/' /> */}
-							<Image src={require('/html.png')} width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/html.png')} width='64' height='64' alt='/' />
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>HTML</h3>
@@ -26,7 +25,7 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							<Image src='/../public/assets/skills/css.png' width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/css.png')} width='64' height='64' alt='/' />
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>CSS</h3>
@@ -37,7 +36,7 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							<Image src='/../public/assets/skills/javascript.png' width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/javascript.png')} width='64' height='64' alt='/' />
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>Javascript</h3>
@@ -48,7 +47,8 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							<Image src='/../public/assets/skills/react.png' width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/react.png')} width='64' height='64' alt='/' />
+							{/* <Image src='/../public/react.png' width='64' height='64' alt='/' /> */}
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>React</h3>
@@ -59,7 +59,7 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							<Image src='/../public/assets/skills/tailwind.png' width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/tailwind.png')} width='64' height='64' alt='/' />
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>Tailwind</h3>
@@ -70,7 +70,7 @@ function Skills() {
 				<div className='p-6 shadow-xl rounde-xl hover:scale-105 ease-in duration-300'>
 					<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 						<div className='m-auto'>
-							<Image src='/../public/assets/skills/github1.png' width='64' height='64' alt='/' />
+							<Image src={require('/static/images/skills/github1.png')} width='64' height='64' alt='/' />
 						</div>
 						<div className='flex flex-col items-center justify-center'>
 							<h3>Github</h3>
