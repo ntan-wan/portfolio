@@ -1,7 +1,8 @@
 import { icons } from 'lucide-react';
 
+// type LucideIcon
 type Props = {
-    name:string,
+    name:string, 
     color?:string,
     size?:number
 }

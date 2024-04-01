@@ -12,7 +12,7 @@ function LayoutMain({ children }: Props) {
       <div className="c-container">
         {children}
       </div>
-      <MainFooter className="mt-auto" />
+      <MainFooter />
     </>
   );
 }

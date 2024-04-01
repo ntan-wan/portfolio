@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import * as Constants from '@/constants'
+import { cn } from '@/lib/utils';
 
 import avatar from '@assets/imgs/avatar-developer-2.png';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
+import resume from '@/assets/resume.pdf'
 
 export function HomeHero() {
   const bounceAnimation = { y: [-8, 20, -8] };
@@ -53,7 +55,7 @@ export function HomeHero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="!mt-6 c-text-muted"
+        className="!mt-6 c-text-muted text-center"
       >
         I am a law degree holder who transitioned to the field of software
         development, merging legal expertise with a dedication to crafting
@@ -69,7 +71,7 @@ export function HomeHero() {
         viewport={{ once: true }}
         className="mt-6 flex justify-center gap-4"
       >
-        <Button>Download CV</Button>
+        <a download href={resume} className={cn(buttonVariants(), 'cursor-pointer')}>Download cv</a>
         <Button variant="outline" onClick={() => handleClick(Constants.CONTACT)}>Get In Touch</Button>
       </motion.div>
     </div>

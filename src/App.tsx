@@ -1,12 +1,15 @@
 import MainLayout from '@/layouts/Main/MainLayout';
 import { Home } from '@/pages/Home';
+import { SiteProvider } from '@/contexts/SiteContext';
 
 function App() {
   return (
     <>
-      <MainLayout>
-        <Home />
-      </MainLayout>
+      <SiteProvider>
+        <MainLayout>
+          <Home />
+        </MainLayout>
+      </SiteProvider>
     </>
   );
 }
