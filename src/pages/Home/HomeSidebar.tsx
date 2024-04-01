@@ -1,13 +1,11 @@
-import { useContext } from 'react';
-import { SiteContext } from '@/contexts/SiteContext';
+import { useSite } from '@/providers/SiteProvider';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 import * as Constants from '@/constants';
 
 export function HomeSidebar() {
-
-  const {siteInfo, setSiteInfo} = useContext(SiteContext);
+  const { sidebarIsOpen, toggleSidebar } = useSite();
   const menubarItems = [
     { label: Constants.HOME },
     { label: Constants.PROJECTS },
@@ -16,7 +14,7 @@ export function HomeSidebar() {
   ];
 
   function handleClick(label: string) {
-    const getElement = (id: string): Element => {
+    const getElement = (id: string): Element | null => {
       return document.querySelector(`#${id}`);
     };
     const scrollToView = (element: Element) => {
@@ -26,19 +24,22 @@ export function HomeSidebar() {
     if (label == Constants.HOME) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      scrollToView(getElement(label));
+      const element = getElement(label);
+      if (element) {
+        scrollToView(element);
+      }
     }
-    setSiteInfo((prevState) =>({...prevState, sidebarisOpen: false}))
+    toggleSidebar();
   }
-//   onOpenChange
-function handleOpenChange (isOpen : boolean) {
+
+  function handleOpenChange(isOpen: boolean) {
     if (!isOpen) {
-        setSiteInfo((prevState) =>({...prevState, sidebarisOpen: false}))
+      toggleSidebar();
     }
-}
+  }
 
   return (
-    <Sheet open={siteInfo.sidebarisOpen} onOpenChange={(isOpen) => handleOpenChange(isOpen)}>
+    <Sheet open={sidebarIsOpen} onOpenChange={(isOpen) => handleOpenChange(isOpen)}>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>

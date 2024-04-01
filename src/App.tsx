@@ -1,6 +1,6 @@
 import MainLayout from '@/layouts/Main/MainLayout';
 import { Home } from '@/pages/Home';
-import { SiteProvider } from '@/contexts/SiteContext';
+import { SiteProvider } from '@/providers/SiteProvider';
 
 function App() {
   return (

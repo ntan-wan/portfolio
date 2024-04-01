@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import * as Constants from '@/constants'
+import * as Constants from '@/constants';
 import { cn } from '@/lib/utils';
 
 import avatar from '@assets/imgs/avatar-developer-2.png';
 import { Button, buttonVariants } from '@/components/ui/button';
-import resume from '@/assets/resume.pdf'
+import resume from '@/assets/resume.pdf';
 
 export function HomeHero() {
   const bounceAnimation = { y: [-8, 20, -8] };
@@ -16,27 +16,22 @@ export function HomeHero() {
   };
 
   function handleClick(label: string) {
-    const getElement = (id: string): Element => {
+    const getElement = (id: string): Element | null => {
       return document.querySelector(`#${id}`);
     };
     const scrollToView = (element: Element) => {
       element.scrollIntoView({ behavior: 'smooth' });
     };
-      scrollToView(getElement(label));
-    
+    const element = getElement(label);
+    if (element) {
+      scrollToView(element);
+    }
   }
 
   return (
     <div className="c-page flex flex-col align-center justify-center" id={Constants.HOME}>
-      <motion.div 
-        animate={bounceAnimation}
-        transition={bounceTransition}
-        className="flex justify-center"
-      >
-        <img
-          src={avatar}
-          className="rounded-full w-10/12 sm:w-6/12 md:w-3/12"
-        />
+      <motion.div animate={bounceAnimation} transition={bounceTransition} className="flex justify-center">
+        <img src={avatar} className="rounded-full w-10/12 sm:w-6/12 md:w-3/12" />
       </motion.div>
 
       <motion.h1
@@ -57,11 +52,9 @@ export function HomeHero() {
         viewport={{ once: true }}
         className="!mt-6 c-text-muted text-center"
       >
-        I am a law degree holder who transitioned to the field of software
-        development, merging legal expertise with a dedication to crafting
-        innovative solutions. With a background in law, I bring a unique
-        perspective to development, fostering creativity and problem-solving in
-        the dynamic landscape of technology
+        I am a law degree holder who transitioned to the field of software development, merging legal expertise with a
+        dedication to crafting innovative solutions. With a background in law, I bring a unique perspective to
+        development, fostering creativity and problem-solving in the dynamic landscape of technology
       </motion.p>
 
       <motion.div
@@ -71,8 +64,12 @@ export function HomeHero() {
         viewport={{ once: true }}
         className="mt-6 flex justify-center gap-4"
       >
-        <a download href={resume} className={cn(buttonVariants(), 'cursor-pointer')}>Download cv</a>
-        <Button variant="outline" onClick={() => handleClick(Constants.CONTACT)}>Get In Touch</Button>
+        <a download href={resume} className={cn(buttonVariants(), 'cursor-pointer')}>
+          Download cv
+        </a>
+        <Button variant="outline" onClick={() => handleClick(Constants.CONTACT)}>
+          Get In Touch
+        </Button>
       </motion.div>
     </div>
   );
