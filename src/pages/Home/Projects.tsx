@@ -15,7 +15,7 @@ type Props = {
   className: string;
 };
 
-export function HomeProjects({ className }: Props) {
+export function Projects({ className }: Props) {
   const tabs = [
     { label: 'Latest', value: 'latest' },
     { label: 'Others', value: 'others' },

@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-export function HomeContact({ className }: Props) {
+export function Contact({ className }: Props) {
   const email = 'wangtanngan@gmail.com';
   const linkedIn = 'https://www.linkedin.com/in/ngan-tan-wang-124a761b5/';
   const gitHub = 'https://github.com/ntan-wan';

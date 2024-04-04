@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import StackIcon from 'tech-stack-icons';
 import { Card, CardContent } from '@/components/ui/card';
 
-export function HomeTechStacks() {
+export function TechStacks() {
   const techStacks: string[] = [
     'html5',
     'css3',

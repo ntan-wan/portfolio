@@ -4,7 +4,7 @@ import * as Constants from '@/constants'
 
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
-export function HomeExperience() {
+export function Experience() {
   const experiences = [
     {
       position: 'Frontend Developer',

@@ -6,7 +6,7 @@ import avatar from '@assets/imgs/avatar-developer-2.png';
 import { Button, buttonVariants } from '@/components/ui/button';
 import resume from '@/assets/resume.pdf';
 
-export function HomeHero() {
+export function Hero() {
   const bounceAnimation = { y: [-8, 20, -8] };
   const bounceTransition = {
     duration: 2,

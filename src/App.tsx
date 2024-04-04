@@ -1,4 +1,4 @@
-import MainLayout from '@/layouts/Main/MainLayout';
+import {MainLayout} from '@/layouts/MainLayout';
 import { Home } from '@/pages/Home';
 import { SiteProvider } from '@/providers/SiteProvider';
 

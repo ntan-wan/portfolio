@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 import * as Constants from '@/constants';
 
-export function HomeSidebar() {
+export function Sidebar() {
   const { sidebarIsOpen, toggleSidebar } = useSite();
   const menubarItems = [
     { label: Constants.HOME },

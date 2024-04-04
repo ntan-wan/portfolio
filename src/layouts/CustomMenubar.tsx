@@ -6,7 +6,7 @@ import { useSite } from '@/providers/SiteProvider';
 import { Button } from '@/components/ui/button';
 import { Icon } from '@/components/ui/Icon';
 
-function MainMenubar() {
+export function CustomMenubar() {
   const {toggleSidebar} = useSite()
   
   const menubarItems = [
@@ -51,5 +51,3 @@ function MainMenubar() {
     </Menubar>
   );
 }
-
-export default MainMenubar;

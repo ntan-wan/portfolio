@@ -1,21 +1,19 @@
-import { HomeHero } from '@/pages/Home/HomeHero';
-import { HomeTechStacks } from '@/pages/Home/HomeTechStacks';
-import { HomeProjects } from '@/pages/Home/HomeProjects';
-import { HomeExperience } from '@/pages/Home/HomeExperience';
-import { HomeContact } from '@/pages/Home/HomeContact';
-import { HomeSidebar } from '@/pages/Home/HomeSidebar';
+import { Hero } from '@/pages/Home/Hero';
+import { TechStacks } from '@/pages/Home/TechStacks';
+import { Projects } from '@/pages/Home/Projects';
+import { Experience } from '@/pages/Home/Experience';
+import { Contact } from '@/pages/Home/Contact';
 
 export function Home() {
   return (
     <div>
-      <HomeSidebar />
-      <HomeHero />
+      <Hero />
       <div className="c-page">
-        <HomeTechStacks />
-        <HomeProjects className="mt-12" />
+        <TechStacks />
+        <Projects className="mt-12" />
       </div>
-      <HomeExperience />
-      <HomeContact />
+      <Experience />
+      <Contact />
     </div>
   );
 }
